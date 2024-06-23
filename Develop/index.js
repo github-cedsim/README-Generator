@@ -1,16 +1,22 @@
 // Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./Develop/utils/generateMarkdown');
+let generateMarkdown;
+try {
+  generateMarkdown = require('./utils/generateMarkdown.js');
+} catch (error) {
+  console.error('Error: Failed to require generateMarkdown module.', error);
+  process.exit(1);
+}
 
 // Array of questions for user input
 function createQuestion(name, message) {
-    return {
-      type: 'input',
-      name: name,
-      message: message,
-    };
-  }
+  return {
+    type: 'input',
+    name: name,
+    message: message,
+  };
+}
 
 const questions = [
   createQuestion('title', 'What is the title of your project?'),
@@ -43,7 +49,7 @@ function init() {
         const markdownContent = generateMarkdown(answers);
         writeToFile('README.md', markdownContent);
       });
-} 
+}  
 
 
 // Function call to initialize app
