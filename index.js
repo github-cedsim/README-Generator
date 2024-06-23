@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 let generateMarkdown;
 try {
-  generateMarkdown = require('./utils/generateMarkdown.js');
+  generateMarkdown = require('./generateMarkdown.js');
 } catch (error) {
   console.error('Error: Failed to require generateMarkdown module.', error);
   process.exit(1);

@@ -9,7 +9,6 @@
 ## Usage
   To generate a readme file with the required information for developers of apps. The user will be prompted with questions about the app and the answers will be used to generate the readme file.  
   
-## GitHub & Video Links
+## GitHub
   [cedsim](https://github.com/cedsim)
-  [Video Link](https://drive.google.com/file/d/1_adCYX5JvY1VwlUMumn3fv4SwbFGDLbg/view?usp=sharing)
     
